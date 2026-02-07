@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font face declarations */
+@font-face {
+  font-family: 'MoMo Trust Display';
+  src: url('/fonts/MoMoTrustDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/MoMoTrustDisplay-Regular.woff') format('woff'),
+       url('/fonts/MoMoTrustDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MoMo Trust Display';
+  src: url('/fonts/MoMoTrustDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/MoMoTrustDisplay-Bold.woff') format('woff'),
+       url('/fonts/MoMoTrustDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global tweaks */
+html, body, #root { height: 100%; }
+body { @apply font-body text-brandDark bg-white; }
+h1, h2, h3, h4, h5, h6 { @apply font-display; }
+
+/* Brand button variants */
+.btn-primary { @apply inline-flex items-center justify-center rounded-md bg-brandBlue px-5 py-3 text-white font-semibold shadow hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brandAccent; }
+.btn-outline { @apply inline-flex items-center justify-center rounded-md border border-brandBlue px-5 py-3 text-brandBlue font-semibold hover:bg-blue-50; }
+.btn-danger { @apply inline-flex items-center justify-center rounded-md bg-red-600 px-5 py-3 text-white font-semibold shadow hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500; }
+
+/* Smooth scrollbar */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
