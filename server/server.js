@@ -15,7 +15,10 @@ await connectCd()
 
 
 //middleware
-app.use(cors())
+app.use(cors({
+  origin: 'https://ak-enterprises-app.vercel.app',
+  credentials: true
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/products', productsRoutes)
